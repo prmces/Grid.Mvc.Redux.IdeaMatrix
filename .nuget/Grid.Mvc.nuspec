@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Grid.Mvc.New</id>
+    <version>1.0.0</version>
+    <title>Grid.Mvc.Redux.IdeaMatrix</title>
+    <authors>prmces</authors>
+    <licenseUrl>https://github.com/prmces/Grid.Mvc.Redux.IdeaMatrix/license</licenseUrl>
+    <projectUrl>https://github.com/prmces/Grid.Mvc.Redux.IdeaMatrix</projectUrl>
+    <iconUrl>http://www.codeplex.com/Download?ProjectName=gridmvc&amp;DownloadId=386651</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Enhancement for Grid.Mvc and Grid.MvcRedux. WithGridItemsCount and WithAggregateOnFooter(Sum,Avg)</description>
+    <tags>ASP.NET MVC Control GridView Grid Generic</tags>
+  </metadata>
+  <files>
+    <file src="..\GridMvc\bin\Release\GridMvc.dll" target="lib\net40" />
+    <file src="..\GridMvc.Site\Views\Shared\_Grid.cshtml" target="Content\Views\Shared" />
+    <file src="..\GridMvc.Site\Views\Shared\_GridPager.cshtml" target="Content\Views\Shared" />
+    <file src="..\GridMvc.Site\Content\Gridmvc.css" target="Content\Content\Gridmvc.css" />
+    <file src="..\GridMvc.Site\Scripts\gridmvc.js" target="Content\Scripts\gridmvc.js" />
+    <file src="..\GridMvc.Site\Scripts\gridmvc.min.js" target="Content\Scripts\gridmvc.min.js" />
+    <file src="..\GridMvc.Site\Scripts\gridmvc.lang.ru.js" target="Content\Scripts\gridmvc.lang.ru.js" />
+    <file src="..\GridMvc.Site\Scripts\gridmvc.lang.fr.js" target="Content\Scripts\gridmvc.lang.fr.js" />
+    <file src="..\GridMvc.Site\Scripts\gridmvc.lang.pt.js" target="Content\Scripts\gridmvc.lang.pt.js" />
+    <file src="..\GridMvc.Site\Grid.mvc.readme" target="Content\Grid.mvc.readme" />
+    <file src="web.config.transform" target="Content\web.config.transform" />
+  </files>
+</package>
