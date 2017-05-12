@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Grid.Mvc.New</id>
+    <id>Grid.Mvc.Redux.IdeaMatrix</id>
     <version>1.0.0</version>
     <title>Grid.Mvc.Redux.IdeaMatrix</title>
     <authors>prmces</authors>
