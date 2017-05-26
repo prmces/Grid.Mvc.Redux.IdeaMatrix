@@ -52,6 +52,15 @@ namespace GridMvc.DataAnnotations
         /// </summary>
         public string FilterWidgetType { get; set; }
 
+        /// <summary>
+        ///     Sets or get column Boolean True Label Name (Default: Yes)
+        /// </summary>
+        public string BoolTrue { get; set; }
+
+        /// <summary>
+        //     Sets or get column Boolean False Label Name (Default: No)
+        /// </summary>
+        public string BoolFalse { get; set; }
 
         /// <summary>
         ///     Sets or get sort initial direction

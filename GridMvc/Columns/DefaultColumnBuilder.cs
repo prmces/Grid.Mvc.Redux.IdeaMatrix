@@ -73,20 +73,20 @@ namespace GridMvc.Columns
 
         private IGridColumn<T> CreateColumn(PropertyInfo pi, bool hidden)
         {
-            Type entityType = typeof (T);
+            Type entityType = typeof(T);
             Type columnType;
 
             if (!hidden)
-                columnType = typeof (GridColumn<,>).MakeGenericType(entityType, pi.PropertyType);
+                columnType = typeof(GridColumn<,>).MakeGenericType(entityType, pi.PropertyType);
             else
-                columnType = typeof (HiddenGridColumn<,>).MakeGenericType(entityType, pi.PropertyType);
+                columnType = typeof(HiddenGridColumn<,>).MakeGenericType(entityType, pi.PropertyType);
 
             //Build expression
 
             ParameterExpression parameter = Expression.Parameter(entityType, "e");
             MemberExpression expressionProperty = Expression.Property(parameter, pi);
 
-            Type funcType = typeof (Func<,>).MakeGenericType(entityType, pi.PropertyType);
+            Type funcType = typeof(Func<,>).MakeGenericType(entityType, pi.PropertyType);
             LambdaExpression lambda = Expression.Lambda(funcType, expressionProperty, parameter);
 
             var column = Activator.CreateInstance(columnType, lambda, _grid) as IGridColumn<T>;
@@ -126,7 +126,10 @@ namespace GridMvc.Columns
                 column.ToolTip = options.ToolTip;
             if (!string.IsNullOrEmpty(options.Css))
                 column.Css(options.Css);
-
+            if (!string.IsNullOrEmpty(options.BoolTrue))
+                column.BoolTrue = options.BoolTrue;
+            if (!string.IsNullOrEmpty(options.BoolFalse))
+                column.BoolFalse = options.BoolFalse;
         }
 
         private void ApplyHiddenColumnAnnotationSettings(IGridColumn<T> column, GridHiddenColumnAttribute options)

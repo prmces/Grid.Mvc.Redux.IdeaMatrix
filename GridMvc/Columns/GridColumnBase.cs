@@ -38,6 +38,10 @@ namespace GridMvc.Columns
 
         public bool HasCustomRender { get { return ValueConstraint != null; } }
 
+        public string BoolTrue { get; set; }
+
+        public string BoolFalse { get; set; }
+
 
         public IGridColumn<T> Titled(string title)
         {
@@ -153,5 +157,6 @@ namespace GridMvc.Columns
         #endregion
 
         public abstract IGridCell GetValue(T instance);
+
     }
 }

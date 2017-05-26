@@ -112,6 +112,16 @@ namespace GridMvc.Columns
 
         bool SanitizeEnabled { get; }
 
+        /// <summary>
+        /// Columns BoolTrue
+        /// </summary>
+        string BoolTrue { get; set; }
+
+        /// <summary>
+        /// Columns BoolFalse
+        /// </summary>
+        string BoolFalse { get; set; }
+
         IGridColumnHeaderRenderer HeaderRenderer { get; set; }
         IGridCellRenderer CellRenderer { get; set; }
 

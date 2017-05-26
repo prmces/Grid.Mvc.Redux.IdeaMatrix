@@ -1,6 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 using GridMvc.Columns;
+using System;
 
 namespace GridMvc
 {
@@ -32,7 +33,16 @@ namespace GridMvc
 
                 if (column.ColumnType.Name.ToLower() == "boolean" && !string.IsNullOrWhiteSpace(cell.ToString()))
                 {
-                    builder.InnerHtml = "<input type=\"checkbox\" id=\"" + column.Name + "\" " + (cell.ToString().ToLower() == "true" ? "checked" : "") + ">";
+
+                    string booltrue = "Yes";
+                    string boolfalse = "No";
+
+                    if (!String.IsNullOrEmpty(column.BoolTrue))
+                        booltrue = column.BoolTrue;
+                    if (!String.IsNullOrEmpty(column.BoolFalse))
+                        boolfalse = column.BoolFalse;
+
+                    builder.InnerHtml = "<span class=\"label label-" + (cell.ToString().ToLower() == "true" ? "primary" : "default") + "\">" + (cell.ToString().ToLower() == "true" ? booltrue : boolfalse) + "</span>";
                 }
                 else
                 {
