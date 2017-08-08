@@ -642,7 +642,7 @@ DateTimeFilterWidget = (function ($) {
         //if window.jQueryUi included:
         if (this.datePickerIncluded) {
             var datePickerOptions = this.data || {};
-            datePickerOptions.format = datePickerOptions.format || "YYYY-MM-DD";
+            datePickerOptions.format = datePickerOptions.format || "yy-mm-dd";
             datePickerOptions.language = datePickerOptions.language || this.lang.code;
 
             var $context = this;
