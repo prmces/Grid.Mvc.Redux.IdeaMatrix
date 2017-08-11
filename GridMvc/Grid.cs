@@ -253,8 +253,14 @@ namespace GridMvc
 
                             }
 
-                            column.AggregateResult = new GridMvc.GridCell(String.Format("{0:0.00}", value / (column.AggregateValue == GridAggregateFunction.Sum ? 1 : ItemsCount)));
-                            column.PageAggregateResult = new GridMvc.GridCell(String.Format("{0:0.00}", valuedisplaying / (column.AggregateValue == GridAggregateFunction.Sum ? 1 : AfterItems.Count())));
+                            string aggFormat = "{0:n}";
+                            if (!String.IsNullOrEmpty(column.AggregateFormat))
+                            {
+                                aggFormat = column.AggregateFormat;
+                            }
+
+                            column.AggregateResult = new GridMvc.GridCell(String.Format(aggFormat, value / (column.AggregateValue == GridAggregateFunction.Sum ? 1 : ItemsCount)));
+                            column.PageAggregateResult = new GridMvc.GridCell(String.Format(aggFormat, valuedisplaying / (column.AggregateValue == GridAggregateFunction.Sum ? 1 : AfterItems.Count())));
 
                         }
 

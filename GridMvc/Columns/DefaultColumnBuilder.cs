@@ -130,6 +130,8 @@ namespace GridMvc.Columns
                 column.BoolTrue = options.BoolTrue;
             if (!string.IsNullOrEmpty(options.BoolFalse))
                 column.BoolFalse = options.BoolFalse;
+            if (!string.IsNullOrEmpty(options.AggregateFormat))
+                column.AggregateFormat = options.AggregateFormat;
         }
 
         private void ApplyHiddenColumnAnnotationSettings(IGridColumn<T> column, GridHiddenColumnAttribute options)

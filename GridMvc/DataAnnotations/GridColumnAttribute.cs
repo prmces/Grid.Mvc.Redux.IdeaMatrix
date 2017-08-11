@@ -62,6 +62,13 @@ namespace GridMvc.DataAnnotations
         /// </summary>
         public string BoolFalse { get; set; }
 
+
+        /// <summary>
+        //     Sets or get format for aggregated fields
+        /// </summary>
+        public string AggregateFormat { get; set; }
+
+
         /// <summary>
         ///     Sets or get sort initial direction
         /// </summary>

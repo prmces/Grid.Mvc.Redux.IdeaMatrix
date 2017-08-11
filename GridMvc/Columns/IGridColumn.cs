@@ -122,6 +122,8 @@ namespace GridMvc.Columns
         /// </summary>
         string BoolFalse { get; set; }
 
+        string AggregateFormat { get; set; }
+
         IGridColumnHeaderRenderer HeaderRenderer { get; set; }
         IGridCellRenderer CellRenderer { get; set; }
 

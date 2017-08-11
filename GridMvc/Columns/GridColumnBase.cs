@@ -42,6 +42,8 @@ namespace GridMvc.Columns
 
         public string BoolFalse { get; set; }
 
+        public string AggregateFormat { get; set; }
+
 
         public IGridColumn<T> Titled(string title)
         {
