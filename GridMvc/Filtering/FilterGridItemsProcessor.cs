@@ -8,7 +8,7 @@ namespace GridMvc.Filtering
     /// <summary>
     ///     Grid items filter proprocessor
     /// </summary>
-    internal class FilterGridItemsProcessor<T> : IGridItemsProcessor<T> where T : class
+    public class FilterGridItemsProcessor<T> : IGridItemsProcessor<T> where T : class
     {
         private readonly IGrid _grid;
         private IGridFilterSettings _settings;
