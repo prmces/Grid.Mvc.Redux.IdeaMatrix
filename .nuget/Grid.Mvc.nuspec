@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Grid.Mvc.Redux.IdeaMatrix</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>Grid.Mvc.Redux.IdeaMatrix</title>
     <authors>prmces</authors>
     <licenseUrl>https://github.com/prmces/Grid.Mvc.Redux.IdeaMatrix/license</licenseUrl>
